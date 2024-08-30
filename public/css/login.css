@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ececec;
+}
+
+.login-box {
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.side-image {
+    flex: 1;
+    background-image: url("/image/register-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+
+.side-image img {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(13.5deg);
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.input-box {
+    width: 100%;
+    max-width: 330px;
+}
+
+.input-box header {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.form-floating img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    cursor: pointer;
+}
+
+.signin {
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+
+span a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+}
+
+span a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .side-image {
+        border-radius: 10px 10px 0 0;
+        min-height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side-image img {
+        width: 50%;
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    .right {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .side-image {
+        min-height: 150px;
+    }
+
+    .side-image img {
+        width: 40%;
+    }
+
+    .input-box header {
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+
+    .form-floating img {
+        width: 25px;
+    }
+
+    .signin {
+        font-size: 12px;
+    }
+}
