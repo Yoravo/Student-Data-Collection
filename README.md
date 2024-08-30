@@ -23,7 +23,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Breeze for Authentication
 
-This project uses [Laravel Breeze](https://laravel.com/docs/breeze) to handle authentication features such as login, registration, password reset, and email verification. Breeze provides a simple, minimal, and lightweight starting point for building out these features using Blade templates and Tailwind CSS.
+This project uses [Laravel Breeze](https://laravel.com/docs/11.x/starter-kits#laravel-breeze) to handle authentication features such as login, registration, password reset, and email verification. Breeze provides a simple, minimal, and lightweight starting point for building out these features using Blade templates and Tailwind CSS.
 
 Breeze's default implementation covers the essential authentication aspects and can be easily extended or customized according to your application's needs.
 
