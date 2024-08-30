@@ -106,42 +106,51 @@ span a:hover {
     }
 
     .side-image {
-        border-radius: 10px 10px 0 0;
-        min-height: 200px;
+        background-image: url("/image/register-bg.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        border-radius: 10px 0 0 10px;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden; /* Menyembunyikan bagian gambar yang melampaui kontainer */
     }
-
+    
     .side-image img {
-        width: 50%;
-        transform: translate(-50%, -50%) rotate(0);
+        width: 100%; /* Membuat gambar menyesuaikan lebar kontainer */
+        height: 100%; /* Membuat gambar menyesuaikan tinggi kontainer */
+        object-fit: contain; /* Membuat gambar menyesuaikan kontainer tanpa crop */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* Memastikan gambar berada di atas background */
     }
-
-    .right {
-        border-radius: 0 0 10px 10px;
+    
+    /* Responsiveness adjustments */
+    @media (max-width: 768px) {
+        .side-image {
+            border-radius: 10px 10px 0 0;
+            min-height: 200px;
+        }
+    
+        .side-image img {
+            width: 100%; /* Memastikan gambar tetap memenuhi lebar kontainer */
+            height: auto; /* Memastikan gambar tetap proporsional */
+        }
     }
-}
-
-@media (max-width: 576px) {
-    .side-image {
-        min-height: 150px;
+    
+    @media (max-width: 576px) {
+        .side-image {
+            min-height: 150px;
+        }
+    
+        .side-image img {
+            width: 50%; /* Menjaga gambar tetap responsif */
+            height: auto;
+        }
     }
-
-    .side-image img {
-        width: 40%;
-    }
-
-    .input-box header {
-        margin-bottom: 30px;
-        font-size: 24px;
-    }
-
-    .form-floating img {
-        width: 25px;
-    }
-
-    .signin {
-        font-size: 12px;
-    }
+    
 }
